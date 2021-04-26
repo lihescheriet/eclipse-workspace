@@ -9,9 +9,6 @@ public class DAOFilm {
 	/**
 	 * contructeur qui doit charger le driver
 	 */
-	private Connection c;
-	private Statement s;
-	
 	public DAOFilm() {
 		try {
 			String strClassName = "com.mysql.jdbc.Driver";
@@ -22,7 +19,6 @@ public class DAOFilm {
 			
 			Class.forName(strClassName);
 			Connection conn = DriverManager.getConnection(strUrl, login, motdepasse);
-			Statement stblablou = conn.createStatement();
 		}
 		catch(Exception e) {  
 			e.printStackTrace();
