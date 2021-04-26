@@ -16,7 +16,7 @@ public class insert {
 			Class.forName(strClassName);
 			Connection conn = DriverManager.getConnection(strUrl, login, motdepasse);
 			Statement stinsert = conn.createStatement();  
-			stinsert.executeUpdate("INSERT INTO film values('1','La menace fantome','1999','épisode I',33.0000000,8.000000);");
+			stinsert.executeUpdate("INSERT INTO film 'La menace fantome','1999','épisode I',33.0000000,8.000000;");
 
 			conn.close();
 			}

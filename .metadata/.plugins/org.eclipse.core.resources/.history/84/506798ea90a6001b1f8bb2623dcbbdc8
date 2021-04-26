@@ -1,9 +1,11 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class insert {
+public class Select {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
@@ -15,15 +17,19 @@ public class insert {
 
 			Class.forName(strClassName);
 			Connection conn = DriverManager.getConnection(strUrl, login, motdepasse);
-			Statement stinsert = conn.createStatement();  
-			stinsert.executeUpdate("INSERT INTO film values('1','La menace fantome','1999','épisode I',33.0000000,8.000000);");
+			Statement stselect = conn.createStatement();  
+			stselect.executeUpdate("SELECT * FROM film;");
+			String stQuery = "SELECT * FROM film;";
+			ResultSet rsSelect = stselect.executeQuery(stQuery);
+			while(rsSelect.next()) {
+				System.out.print("Titre : " + rsSelect.getString(1) +"." + rsSelect.getString(2) + rsSelect.getString(3) + rsSelect.getDouble(1) + rsSelect.getDouble(2));
+			}
 
 			conn.close();
-			}
-			catch(ClassNotFoundException e) {  
-				System.err.println("Driver non chargé !");  e.printStackTrace();
-			} catch(SQLException e) {
-				System.err.println("Autre erreur !");  e.printStackTrace();
-			}
 		}
+		catch(Exception e) {  
+		}
+		
+	}
+
 }
