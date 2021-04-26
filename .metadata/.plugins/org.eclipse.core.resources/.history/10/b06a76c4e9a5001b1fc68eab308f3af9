@@ -1,0 +1,17 @@
+package starwars;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Film filmStarWars = new Film("un nouvel espoir", "1977", "épisode 4", 8.000000, 323.000000);
+		Film filmStarWars1 = new Film("L'Empire contre-attaque", "1980", "épisode 5", 33.000000, 400.000000);
+		Film filmStarWars2 = new Film(nouveauFilm);
+		
+		
+		ArrayList<Film> films = new ArrayList();
+		films.add(filmStarWars);
+		films.add(filmStarWars1);
+		films.add(filmStarWars2);
+	}
+}

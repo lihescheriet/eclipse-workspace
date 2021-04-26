@@ -1,0 +1,7 @@
+package starwars;
+
+public class Main {
+	public static void main(String[] args) {
+		Film filmStarWars = new Film("un nouvel espoir", "1977", "épisode 4");
+	}
+}

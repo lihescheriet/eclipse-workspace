@@ -1,0 +1,50 @@
+package starwars;
+import java.util.ArrayList;
+
+
+public class Main {
+	public static void main(String[] args) {
+		Film filmStarWars = new Film("un nouvel espoir", "1977", "épisode 4", 8.000000, 323.000000);
+		Film filmStarWars1 = new Film("L'Empire contre-attaque", "1980", "épisode 5", 33.000000, 400.000000);
+		Film filmStarWars2 = new Film(true);
+		
+		
+		ArrayList<Film> films = new ArrayList();
+		films.add(filmStarWars);
+		films.add(filmStarWars1);
+		films.add(filmStarWars2);
+		 try { 
+
+	         String strClassName = "com.mysql.jdbc.Driver";
+
+	         String dbName= "toto"; 
+
+	         String login= "root"; 
+
+	         String motdepasse= ""; 
+
+	         String strUrl = "jdbc:mysql://195.144.11.16:localhost" + dbName;
+
+
+
+	         Class.forName(strClassName);
+
+	         Connection conn = DriverManager.getConnection(strUrl, login, motdepasse);
+
+	         // . . .
+
+	         conn.close();
+
+	         }
+
+	         catch(ClassNotFoundException e) { 
+
+	            System.err.println("Driver non chargé !"); e.printStackTrace();
+
+	         } catch(SQLException e) {
+
+	            System.err.println("Autre erreur !"); e.printStackTrace();
+
+	         }
+	}
+}

@@ -1,0 +1,3 @@
+module cours_Java {
+	
+}

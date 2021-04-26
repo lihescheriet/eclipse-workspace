@@ -1,0 +1,4 @@
+
+public class visite {
+	String nom_etudiant = "cheriet";
+}

@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package tools;
+/**
+ * 
+ * @author Lihes
+ *
+ */
+/**
+ * 
+ * Class - DateUS
+ * <br/>
+ * <br/>Constructor :
+ * <br/>- MesDates()
+ * <br/>
+ * <br/>Functions :
+ * <br/>- MestDates.dateFRtoUS(String date)
+ * <br/>  |--> Return String
+ * <br/>
+ * <br/>- MestDates.dateFRtoUS(String date)
+ * <br/>  |--> Return String
+ * <br/>
+ * <br/>End.
+ *
+ */
+public class DateUS {
+	/**
+	 * Constructor
+	 */
+	public DateUS() {
+		
+	}
+}
